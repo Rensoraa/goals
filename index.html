@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P100 Goals</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    
+    <h1>🎯 Character P100 Goals</h1>
+    <p class="subtitle">Tracking who’s next in line for the grind.</p>
+    <a href="https://rensoraa.github.io/p100/" class="back-button">← Back to Main Site</a>
+
+  </header>
+
+  <section id="in-progress-container" class="goals-container">
+    <div class="character-card">
+      <h2>Xenomorph</h2>
+      <span class="role-label role-killer">Killer</span>
+      <p class="progress">Prestige 4 → Goal: 100</p>
+      <p class="priority priority-high">🔥 High Priority</p>
+    </div>
+
+    <div class="character-card">
+      <h2>Pyramid Head</h2>
+      <span class="role-label role-killer">Killer</span>
+      <p class="progress">Prestige 52 → Goal: 100</p>
+      <p class="priority priority-high">🔥 High Priority</p>
+    </div>
+
+    <div class="character-card">
+      <h2>The Blight</h2>
+      <span class="role-label role-killer">Killer</span>
+      <p class="progress">Prestige 14 → Goal: 100</p>
+      <p class="priority priority-high">🔥 High Priority</p>
+    </div>
+
+    <div class="character-card">
+      <h2>Ada Wong</h2>
+      <span class="role-label role-survivor">Survivor</span>
+      <p class="progress">Prestige 6 → Goal: 100</p>
+      <p class="priority priority-low">📌 Low Priority</p>
+    </div>
+
+    <div class="character-card">
+      <h2>The Clown</h2>
+      <span class="role-label role-killer">Killer</span>
+      <p class="progress">Prestige 11 → Goal: 100</p>
+      <p class="priority priority-low">📌 Low Priority</p>
+    </div>
+
+    <div class="character-card">
+      <h2>Nea Karlsson</h2>
+      <span class="role-label role-survivor">Survivor</span>
+      <p class="progress">Prestige 100 ✅</p>
+      <p class="priority priority-low">Maxed</p>
+    </div>
+    <div class="character-card">
+      <h2>Sable Ward</h2>
+      <span class="role-label role-survivor">Survivor</span>
+      <p class="progress">Prestige 100 ✅</p>
+      <p class="priority priority-low">Maxed</p>
+    </div>
+  </section>
+
+  <!-- P100 Section Wrapper -->
+  <section id="p100-wrapper">
+    <h2>🎯 Reached Prestige 100</h2>
+    <section id="p100-container" class="goals-container"></section>
+  </section>
+
+  <footer>
+    <p>Last updated: July 29, 2025</p>
+  <p style="margin-top: 1rem;">
+    <a href="goals.html" class="footer-link">🎯 View Character P100 Goals</a>
+  </p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const inProgressContainer = document.getElementById('in-progress-container');
+      const p100Container = document.getElementById('p100-container');
+
+      const cards = Array.from(inProgressContainer.querySelectorAll('.character-card'));
+
+      let hasP100 = false;
+
+      cards.forEach(card => {
+        const progressText = card.querySelector('.progress').textContent.trim();
+
+        if (progressText.includes('Prestige 100')) {
+          p100Container.appendChild(card);
+          hasP100 = true;
+        }
+      });
+
+      // Show or hide P100 wrapper depending on presence of P100 characters
+      const p100Wrapper = document.getElementById('p100-wrapper');
+      if (hasP100) {
+        p100Wrapper.style.display = 'block';
+      } else {
+        p100Wrapper.style.display = 'none';
+      }
+    });
+
+    function goBack() {
+  window.location.href = 'https://rensoraa.github.io/p100/'; 
+}
+
+  </script>
+</body>
+</html>
