@@ -34,7 +34,7 @@ h1 {
 
 .goals-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   width: 100%;
   max-width: 900px;
@@ -83,6 +83,11 @@ h1 {
 .role-killer {
   background-color: #ff4444;
   box-shadow: 0 0 10px #ff4444aa;
+}
+
+.role-Salt-farming {
+  background-color: #0c83c9;
+  box-shadow: 0 0 10px #0c83c9aa;
 }
 
 .progress {
@@ -135,7 +140,7 @@ footer {
   margin-top: auto;
 }
 header {
-  position: relative; /* Make it the reference for absolute positioning */
+  position: relative;
   padding: 2rem 1rem 1rem;
   text-align: center;
 }
