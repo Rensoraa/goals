@@ -162,3 +162,11 @@ header {
   color: #fff;
   box-shadow: 0 0 15px #cc0000dd;
 }
+.note {
+  font-size: 15px;
+  color: #cc0000;
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+}
